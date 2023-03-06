@@ -1,12 +1,12 @@
 package com.example.Automation.pages;
 
 
+import com.example.Automation.annotation.Page;
+import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.stereotype.Component;
 
-@Component
+@Page
 public class MainPage extends BasePage{
 
     public MainPage() {
@@ -18,7 +18,8 @@ public class MainPage extends BasePage{
 
     @Autowired
     private HomePage homePage;
-
+    @Autowired
+    private WebDriver webDriver;
     @Value("${app.url}")
     private String appUrl;
 
@@ -26,7 +27,7 @@ public class MainPage extends BasePage{
     public void PerformLogin() {
 
         System.out.println("Login:" + appUrl);
-        navigateToApp(appUrl);
+        webDriver.navigate().to("http://eaapp.somee.com");
         homePage.ClickLogin();
         loginPage.Login("admin", "adminpassword23432");
         loginPage.ClickLogin();

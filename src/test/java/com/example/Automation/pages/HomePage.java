@@ -1,13 +1,19 @@
 package com.example.Automation.pages;
 
 
+import com.example.Automation.annotation.LazyAutowired;
+import com.example.Automation.annotation.Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.springframework.stereotype.Component;
+import org.openqa.selenium.support.PageFactory;
 
-@Component
+@Page
 public class HomePage extends BasePage {
+
+    @LazyAutowired
+    private WebDriver webDriver;
 
     public HomePage() {
         System.out.println("In Home Page");
@@ -20,6 +26,7 @@ public class HomePage extends BasePage {
     public WebElement lnkEmployeeList;
 
     public LoginPage ClickLogin() {
+        PageFactory.initElements(this.webDriver,this);
         lnkLogin.click();
         System.out.println("Click the home page login");
         return new LoginPage();

@@ -1,28 +1,32 @@
 package com.example.Automation.steps;
 
+import com.example.Automation.annotation.LazyAutowired;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
+
+
 
 public class Hooks {
 
-    @Autowired
+    @LazyAutowired
     private WebDriver webDriver;
 
 
 
     @Before
-    public void initializeTest(Scenario scenario){
-        webDriver.navigate().to("http://eaapp.somee.com");
+    public void before(Scenario scenario){
+        this.webDriver.navigate().to("http://eaapp.somee.com");
     }
 
     @After
-    public void tearDownTest(Scenario scenario){
+    public void after(Scenario scenario){
         if(scenario.isFailed()){
             System.out.println(scenario.getName());
         }
-       // webDriver.close();
+        this.webDriver.quit();
     }
+
+
 }

@@ -1,31 +1,35 @@
 package com.example.Automation.libraries;
 
+import com.example.Automation.annotation.LazyConfiguration;
+import com.example.Automation.annotation.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+
+@LazyConfiguration
 public class WebDriverLibrary {
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public WebDriver getChromeDriver(){
         return new ChromeDriver();
     }
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver getFireFoxDriver(){
         return new FirefoxDriver();
     }
 
-    @Bean
+    @ThreadScopeBean
+    @ConditionalOnMissingBean
     @ConditionalOnProperty(name = "browser", havingValue = "edge")
     public WebDriver getEdgeDriver(){
         return new EdgeDriver();
     }
+
 }

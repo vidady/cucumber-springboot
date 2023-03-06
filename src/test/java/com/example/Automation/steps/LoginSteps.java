@@ -1,26 +1,24 @@
 package com.example.Automation.steps;
 
+import com.example.Automation.annotation.LazyAutowired;
 import com.example.Automation.pages.HomePage;
 import com.example.Automation.pages.LoginPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.testng.Assert;
 
-import java.util.List;
 
 public class LoginSteps {
 
-    @Autowired
+    @LazyAutowired
     private HomePage homePage;
-    @Autowired
+    @LazyAutowired
     private LoginPage loginPage;
 
     @Given("I click login in Home Page")
     public void iClickLoginInHomePage() {
-        homePage.ClickLogin();
+       this.homePage.ClickLogin();
     }
 
 

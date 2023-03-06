@@ -1,15 +1,12 @@
 package com.example.Automation.pages;
 
+import com.example.Automation.annotation.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.springframework.stereotype.Component;
 
-@Component
+@Page
 public class LoginPage extends BasePage{
-    public LoginPage() {
-        System.out.println("In Login page");
-    }
 
     @FindBy(how = How.NAME, using = "UserName")
     public WebElement txtUserName;
