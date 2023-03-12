@@ -29,8 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install --file pom.xml -Dspring.profiles.active=prod
-    - name: Cucumber Report to Annotations
     - uses: deblockt/cucumber-report-annotations-action@v1.11
+    - name: Cucumber Report to Annotations
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
         path: "**/cucumber.json"
