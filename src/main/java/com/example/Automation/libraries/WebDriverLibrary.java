@@ -4,6 +4,7 @@ import com.example.Automation.annotation.LazyConfiguration;
 import com.example.Automation.annotation.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -17,7 +18,7 @@ public class WebDriverLibrary {
     @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public WebDriver getChromeDriver(){
-        return new ChromeDriver();
+        return new ChromeDriver(new ChromeOptions().addArguments("--headless=new"));
     }
 
     @ThreadScopeBean
