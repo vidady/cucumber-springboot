@@ -1,9 +1,0 @@
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/runner/TestRunner.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/steps/LoginSteps.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/steps/CucumberTestConfigContext.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/steps/Hooks.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/pages/LoginPage.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/pages/MainPage.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/pages/HomePage.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/pages/BasePage.java
-/home/runner/work/cucumber-springboot/cucumber-springboot/src/test/java/com/example/Automation/AutomationApplicationTests.java
