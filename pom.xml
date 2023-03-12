@@ -116,8 +116,9 @@
 							<projectName>Spring QA Automation</projectName>
 							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 							<inputDirectory>${project.build.directory}</inputDirectory>
+							<checkBuildResult>false</checkBuildResult>
 							<jsonFiles>
-								<jsonFile>**/*.json</jsonFile>
+								<jsonFile>**/cucumber.json</jsonFile>
 							</jsonFiles>
 						</configuration>
 					</execution>
