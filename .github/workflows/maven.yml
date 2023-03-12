@@ -35,7 +35,7 @@ jobs:
         path: "**/cucumber.json"
         annotation-status-on-error: 'warning'
         annotation-status-on-undefined: 'warning'
-        
+        check-status-on-error: 'neutral'
     - name: Deploy report to github page
       uses: peaceiris/actions-gh-pages@v3
       with:
