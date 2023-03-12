@@ -1,0 +1,11 @@
+com/example/Automation/libraries/RemoteWebDriverLibrary.class
+com/example/Automation/scope/BrowserScope.class
+com/example/Automation/annotation/ThreadScopeBean.class
+com/example/Automation/annotation/PageFragment.class
+com/example/Automation/scope/BrowserScopeConfig.class
+com/example/Automation/AutomationApplication.class
+com/example/Automation/annotation/LazyConfiguration.class
+com/example/Automation/annotation/Page.class
+com/example/Automation/libraries/WebDriverLibrary.class
+com/example/Automation/annotation/LazyAutowired.class
+com/example/Automation/scope/BrowserScopePostProcessor.class

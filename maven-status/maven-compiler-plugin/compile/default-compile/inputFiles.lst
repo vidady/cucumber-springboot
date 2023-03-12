@@ -1,0 +1,11 @@
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/libraries/RemoteWebDriverLibrary.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/AutomationApplication.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/scope/BrowserScopeConfig.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/libraries/WebDriverLibrary.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/annotation/LazyAutowired.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/annotation/ThreadScopeBean.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/annotation/PageFragment.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/annotation/LazyConfiguration.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/annotation/Page.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/scope/BrowserScope.java
+/home/runner/work/cucumber-springboot/cucumber-springboot/src/main/java/com/example/Automation/scope/BrowserScopePostProcessor.java
