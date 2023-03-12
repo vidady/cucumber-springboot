@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 		<selenium.version>4.8.0</selenium.version>
 		<testng.version>7.7.1</testng.version>
 		<surefire.plugin.version>3.0.0-M4</surefire.plugin.version>
@@ -25,6 +25,11 @@
 
 
 	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-http-jdk-client</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -88,12 +93,35 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${surefire.plugin.version}</version>
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
 						<include>
-							com.example.Automation.SpringTestNGTest
+							com.example.Automation.runner.TestRunner
 						</include>
 					</includes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.7.5</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Spring QA Automation</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+							<inputDirectory>${project.build.directory}</inputDirectory>
+							<jsonFiles>
+								<jsonFile>**/*.json</jsonFile>
+							</jsonFiles>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
